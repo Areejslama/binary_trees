@@ -44,14 +44,14 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	left_side = binary_tree_height(tree->left);
 	right_side = binary_tree_height(tree->right);
-	
 	if (tree->left == NULL && tree->right == NULL)
 	{
 		return (1);
 	}
 	if (tree->left != NULL && tree->right != NULL)
 	{
-		return ( left_side == right_side && binary_tree_is_perfect(tree->left) && binary_tree_is_perfect(tree->right));
+		return (left_side == right_side && binary_tree_is_perfect(tree->left)
+				&& binary_tree_is_perfect(tree->right));
 	}
 	return (0);
 
